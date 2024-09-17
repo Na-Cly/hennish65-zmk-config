@@ -136,7 +136,7 @@ RC(4,0) RC(5,0) RC(2,1)                 RC(7,2)                         RC(0,5) 
         compatible = "zmk,physical-layout";
         display-name = "LAYOUT";
 
-        kscan = <&kscan_0>;
+        kscan = <&kscan0>;
         transform = <&matrix_transform_0>;
 
         keys  //                     w   h    x    y     rot    rx    ry
