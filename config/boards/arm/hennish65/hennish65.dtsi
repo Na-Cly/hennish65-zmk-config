@@ -7,6 +7,8 @@
 
 #include <nordic/nrf52840_qiaa.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
+
 / {
     model = "HENNISH65";
     compatible = "hennish65";
@@ -44,13 +46,13 @@ RC(4,0) RC(5,0) RC(2,1)                 RC(7,2)                         RC(0,5) 
         >;
 	};
 
-    /*kscan0: kscan {
+    kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "row2col";
 	wakeup-source;
 
-    };*/
+    };
     
     right_encoder: right_encoder {
         compatible = "alps,ec11";
@@ -129,9 +131,6 @@ RC(4,0) RC(5,0) RC(2,1)                 RC(7,2)                         RC(0,5) 
         };
     };
 };
-#include <physical_layouts.dtsi>
-
-/ {
     layout_0: layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "LAYOUT";
@@ -210,4 +209,3 @@ RC(4,0) RC(5,0) RC(2,1)                 RC(7,2)                         RC(0,5) 
             , <&key_physical_attrs 100 100 1500  400       0     0     0>
             ;
     };
-};
