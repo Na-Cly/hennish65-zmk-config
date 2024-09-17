@@ -33,7 +33,7 @@
 
 
 
-	default_transform: keymap_transform_1 {
+	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
 		columns = <9>;
 		rows = <8>;
@@ -46,14 +46,7 @@ RC(4,0) RC(5,0) RC(2,1)                 RC(7,2)                         RC(0,5) 
         >;
 	};
 
-    kscan0: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
-        diode-direction = "row2col";
-	wakeup-source;
-
-    };
-    
+   
     right_encoder: right_encoder {
         compatible = "alps,ec11";
         label = "RIGHT_ENCODER";
@@ -131,12 +124,15 @@ RC(4,0) RC(5,0) RC(2,1)                 RC(7,2)                         RC(0,5) 
         };
     };
 };
-    layout_0: layout_0 {
+    default_layout: default_layout {
         compatible = "zmk,physical-layout";
-        display-name = "LAYOUT";
-
+        display-name = "Default";
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        diode-direction = "row2col";
+	wakeup-source;
         kscan = <&kscan0>;
-        transform = <&matrix_transform_0>;
+        transform = <&default_transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0       0     0     0>
