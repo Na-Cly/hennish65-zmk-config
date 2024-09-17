@@ -44,13 +44,13 @@ RC(4,0) RC(5,0) RC(2,1)                 RC(7,2)                         RC(0,5) 
         >;
 	};
 
-    kscan0: kscan {
+    /*kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "row2col";
 	wakeup-source;
 
-    };
+    };*/
     
     right_encoder: right_encoder {
         compatible = "alps,ec11";
