@@ -1,3 +1,4 @@
+name: zmk-keyboard-hennish65
 build:
   settings:
     board_root: .
